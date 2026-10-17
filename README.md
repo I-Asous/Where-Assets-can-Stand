@@ -65,8 +65,3 @@ Code reference: <https://codelibrary.amlegal.com/codes/newyorkcity/latest/NYCadm
 | 6 | Nov 23 – Nov 25 *(Thanksgiving week)* | Overlay bus shelters, kiosks, and street furniture. Flag assets in C and D zones and compare them against rated capacity. | **Status report #2:** Asset overlay |
 | 7 | Nov 30 – Dec 4 | Quality-check all layers against the code figures and fix any discrepancies. Make the final maps. Draft the methods memo. | Draft deliverables to supervisor |
 | 8 | Dec 7 – Dec 10 | Revise based on feedback. Finish the presentation and hand off the data. | **Final presentation:** Dec 10 |
-
-**Notes:**
-
-- **Weeks 4–5 are the heaviest.** Brooklyn and Queens have long, complicated shorelines. If the work falls behind, move Staten Island into Week 6 and start the asset overlay in Week 7.
-- **Status reports** come at Week 3 and Week 6. That way leadership sees a working pilot early, and the full asset picture before final review.ets.
