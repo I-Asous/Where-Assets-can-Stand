@@ -1,21 +1,21 @@
 # Where Assets Can Stand: A Wind Load Capacity Map of New York City
- 
+
 **NYC DOT Internship Project**
- 
+
 ## Overview
- 
+
 NYC DOT installs street assets such as bus shelters, kiosks, and other street furniture across all five boroughs. Each one has to withstand the wind load at its location, and that load changes a lot depending on how close the site is to open water.
- 
+
 This project digitizes the wind exposure categories in the **NYC Building Code (§1609.4.3)** and maps them citywide. The result is a GIS layer that shows, for any location, which exposure category applies and how far it is from the shoreline. DOT can overlay it with asset data to decide where something can be safely placed.
- 
+
 **Core question:** Where is wind load greatest, and can a given asset be safely placed there?
- 
+
 ## Background
- 
+
 ### Basic Design Wind Speed (NYC Building Code §1609.3)
- 
+
 **Table 1609.3: Basic Design Wind Speed**
- 
+
 | Risk Category | Basic Design Wind Speed, mph (3-sec gust, 33 ft, Exposure C) | Mean Recurrence Interval, years | Probability of Exceedance in 50 years, % |
 |---|---|---|---|
 | I | 110 | 300 | 15 |
@@ -23,21 +23,20 @@ This project digitizes the wind exposure categories in the **NYC Building Code (
 | III | 127 | 1,700 | 3 |
 | IV | 132 | 3,000 | 1.6 |
 
- 
 **Why it matters for this project:**
 - The wind speed sets the baseline load for a structure.
 - The exposure category, mapped in this project, then adjusts that load up or down depending on location.
- 
+
 ### Wind Exposure Categories (NYC Building Code §1609.4.3)
- 
+
 | Category | Description | Code Criteria |
 |---|---|---|
 | **B** | Sheltered, dense urban surface | Structures 30 ft tall or less: 1,500 ft of built-up surface roughness upwind. Taller structures: 2,600 ft or 20× building height, whichever is greater. |
 | **C** | Default / near-shore | Applies where shown in Figure 1609.4.3, or wherever B or D doesn't apply. On the figures, this covers buildings within 2,600 ft (or 20× height) of the shoreline. |
 | **D** | Coastal, highest wind | Open-water roughness for 5,000 ft (or 20× height) upwind, plus sites within 600 ft (or 20× height) of a D condition. |
- 
+
 Figures 1609.4.3(1)–(5) map these exposures along each borough's shoreline:
- 
+
 1. Manhattan
 2. Bronx
 3. Brooklyn
@@ -45,11 +44,29 @@ Figures 1609.4.3(1)–(5) map these exposures along each borough's shoreline:
 5. Staten Island
 
 Code reference: <https://codelibrary.amlegal.com/codes/newyorkcity/latest/NYCadmin/0-0-0-177667>
- 
+
 ## Objectives
- 
+
 1. Digitize the NYC shoreline and assign exposure categories to each segment using the code figures.
 2. Build exposure zones based on distance from the shoreline, measured in feet.
 3. Classify every building footprint into Exposure B, C, or D.
 4. Overlay existing and proposed street assets to flag high-exposure placements.
 5. Produce decision-ready maps that DOT staff can layer with other datasets.
+
+## Timeline (Oct 19 – Dec 10, 2026)
+
+| Week | Dates | Tasks | Milestone |
+|---|---|---|---|
+| 1 | Oct 19 – Oct 23 | Confirm scope with supervisor. Collect DCP borough boundaries, OTI planimetric building footprints, hydrography, and asset locations. Collect rated wind load capacity for each asset type. | Data inventory complete |
+| 2 | Oct 26 – Oct 30 | Georeference the Manhattan figure. Digitize the Manhattan shoreline and assign exposure values. | Manhattan shoreline layer |
+| 3 | Nov 2 – Nov 6 | Build Manhattan buffer zones (600 / 1,500 / 2,600 / 5,000 ft). Classify Manhattan buildings using the 20× height rule. | **Status report #1:** Manhattan pilot |
+| 4 | Nov 9 – Nov 13 | Georeference, digitize, buffer, and classify the Bronx and Brooklyn. | Bronx + Brooklyn layers |
+| 5 | Nov 16 – Nov 20 | Georeference, digitize, buffer, and classify Queens and Staten Island. | All five boroughs mapped |
+| 6 | Nov 23 – Nov 25 *(Thanksgiving week)* | Overlay bus shelters, kiosks, and street furniture. Flag assets in C and D zones and compare them against rated capacity. | **Status report #2:** Asset overlay |
+| 7 | Nov 30 – Dec 4 | Quality-check all layers against the code figures and fix any discrepancies. Make the final maps. Draft the methods memo. | Draft deliverables to supervisor |
+| 8 | Dec 7 – Dec 10 | Revise based on feedback. Finish the presentation and hand off the data. | **Final presentation:** Dec 10 |
+
+**Notes:**
+
+- **Weeks 4–5 are the heaviest.** Brooklyn and Queens have long, complicated shorelines. If the work falls behind, move Staten Island into Week 6 and start the asset overlay in Week 7.
+- **Status reports** come at Week 3 and Week 6. That way leadership sees a working pilot early, and the full asset picture before final review.ets.
